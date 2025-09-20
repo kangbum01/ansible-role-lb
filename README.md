@@ -28,9 +28,9 @@ web_backends:
 없음.
 단독으로 동작하지만, 다음과 같은 롤과 함께 사용하면 WEB-LB-NFS 아키텍처를 완성할 수 있습니다:
 
-kangbum01.web (웹 서버 롤)
+- [웹 서버 롤](https://github.com/kangbum01/ansible-role-web)
 
-kangbum01.nfs (NFS 서버 롤)
+- [NFS 서버 롤](https://github.com/kangbum01/ansible-role-nfs)
 
 예시 플레이북 (Example Playbook)
 ------------------------
