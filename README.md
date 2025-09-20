@@ -11,6 +11,39 @@ LB Role
 - Ansible 버전: 2.14 이상
 - `firewalld` 패키지가 시스템 저장소에서 사용 가능해야 함
 
+그룹 변수 (Group vars)
+------------------------
+다음과 같은 변수를 설정할 수 있습니다. (예시 값 포함)
+```yaml
+# NFS 설정
+nfs_server: 192.168.10.10
+nfs_export: /www
+nfs_allowed: 192.168.10.0/24
+
+# LB 설정
+lb_ip: 192.168.10.12
+
+# DNS 설정
+ns_server:
+  domain: lje.com
+  name: ns1.lje.com
+  ip: 192.168.10.13
+fwd_zone:
+  name: lje.com
+  file: lje.com.zone
+rev_zone:
+  name: 10.168.192.in-addr.arpa
+  file: 10.168.192.rev
+
+# LB → WEB
+web_backends:
+  - { name: "web1", ip: "192.168.10.11", port: 80 }
+  - { name: "web2", ip: "192.168.10.14", port: 80 }
+
+web_vhosts:
+  - { name: "vhost-80", port: 80, server_name: "www.lje.com" }
+```
+
 롤 변수 (Role Variables)
 ------------------------
 
