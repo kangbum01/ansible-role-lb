@@ -20,7 +20,10 @@ LB Role
 web_backends:
   - { name: "web1", ip: "192.168.10.11", port: 80 }
   - { name: "web2", ip: "192.168.10.14", port: 80 }
+
+
 의존 관계 (Dependencies)
+------------------------
 없음.
 단독으로 동작하지만, 다음과 같은 롤과 함께 사용하면 WEB-LB-NFS 아키텍처를 완성할 수 있습니다:
 
@@ -29,8 +32,7 @@ kangbum01.web (웹 서버 롤)
 kangbum01.nfs (NFS 서버 롤)
 
 예시 플레이북 (Example Playbook)
-yaml
-코드 복사
+------------------------
 - hosts: lb
   become: true
   roles:
@@ -39,17 +41,12 @@ yaml
         web_backends:
           - { name: "web1", ip: "192.168.10.11", port: 80 }
           - { name: "web2", ip: "192.168.10.14", port: 80 }
+
 라이선스 (License)
+------------------------
 MIT
 
 작성자 정보 (Author Information)
 작성자: kangbum01
 GitHub: https://github.com/kangbum01
 
-
-
-
-
-
-
-ChatGPT에게 묻기
