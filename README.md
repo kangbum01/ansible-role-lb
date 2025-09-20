@@ -30,7 +30,7 @@ web_backends:
 
 - [NFS 서버 롤 - git](https://github.com/kangbum01/ansible-role-nfs)
 - [NFS 서버 롤 - ansible-galaxy](https://galaxy.ansible.com/ui/standalone/roles/kangbum01/nfs/)
-- [WEB 롤](https://github.com/kangbum01/ansible-role-web)
+- [WEB 롤 - git](https://github.com/kangbum01/ansible-role-web)
 - [WEB 롤 - ansible-galaxy](https://galaxy.ansible.com/ui/standalone/roles/kangbum01/web/)
 
 예시 플레이북 (Example Playbook)
